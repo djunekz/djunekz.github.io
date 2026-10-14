@@ -43,7 +43,7 @@ def page(fn,title,desc,body,head='',kind='WebPage',path=None):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css"></head>
-<body><nav class="bar" aria-label="Main"><div class="wrap in"><a class="brand" href="/"><img src="/assets/logo.png" alt="" width="32" height="32">djunekz</a><div class="links">{nav}</div></div></nav>
+<body><nav class="bar" aria-label="Main"><div class="wrap in"><a class="brand" href="/"><img src="/assets/logo.png" alt="" width="32" height="32">djunekz</a><div class="links" id="menu">{nav}</div><button class="mbtn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Toggle menu"><span></span><span></span><span></span><b>menu</b></button></div></nav>
 <main>{body}</main>
 <footer><div class="wrap in"><span>No roadmap. No promises. Only systems that converge. ∎</span><span><a href="https://github.com/djunekz">GitHub</a> · <a href="mailto:{EMAIL}">Email</a> · <a href="/sitemap.xml">Sitemap</a></span></div></footer>
 <script src="/assets/app.js" defer></script></body></html>'''
