@@ -1,7 +1,7 @@
 (function(){var n=document.querySelector('nav.bar'),b=n&&n.querySelector('.mbtn');if(b){function t(v){n.classList.toggle('open',v);document.body.classList.toggle('lock',v);b.setAttribute('aria-expanded',v)}
 b.addEventListener('click',function(){t(!n.classList.contains('open'))});
 n.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){t(false)})});
-document.addEventListener('keydown',function(e){if(e.key==='Escape')t(false)});
+n.addEventListener('click',function(e){if(e.target===n)t(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape')t(false)});
 window.addEventListener('resize',function(){if(innerWidth>820)t(false)})}})();
 (function(){
 var o=document.getElementById('out'),i=document.getElementById('cmd');if(!o||!i)return;

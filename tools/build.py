@@ -27,7 +27,8 @@ FJ=',\n'.join('{"@type":"Question","name":"%s","acceptedAnswer":{"@type":"Answer
 
 def page(fn,title,desc,body,head='',kind='WebPage',path=None):
     url=B+'/'+('' if fn=='index.html' else fn)
-    nav=''.join('<a href="%s"%s>%s</a>'%(f,' aria-current="page"' if f==fn else '',n) for f,n in NAV)
+    D={'home':'start here','about':'who is djunekz','projects':'5 open-source tools','stack':'languages & platforms','principles':'7 design rules','handles':'all aliases','faq':'quick answers','contact':'email & github'}
+    nav=''.join('<a href="%s"%s data-d="%s">%s</a>'%(f,' aria-current="page"' if f==fn else '',D[n],n) for f,n in NAV)
     ld='''<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"%s","@id":"%s#page","url":"%s","name":"%s","isPartOf":{"@id":"%s/#website"},"about":{"@id":"%s/#person"}},{"@type":"WebSite","@id":"%s/#website","url":"%s/","name":"Djunekz","publisher":{"@id":"%s/#person"}},{"@type":"Person","@id":"%s/#person","name":"Djunekz","alternateName":["RedHat","mrxXx","Hmei7","Anonymous"],"url":"%s/","image":"%s/assets/icon-512.png","jobTitle":"Tooling Architect & Automation Engineer","sameAs":["https://github.com/djunekz"]}%s]}</script>'''%(kind,url,url,title,B,B,B,B,B,B,B,B,head)
     return f'''<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
