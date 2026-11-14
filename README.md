@@ -1,4 +1,4 @@
-# Djunekz — Personal Engineering Portfolio
+# Djunekz - Personal Engineering Portfolio
 
 A lightweight, multi-page portfolio for [Djunekz](https://github.com/djunekz), focused on independent software development, terminal tooling, automation and reliability-oriented engineering.
 
@@ -48,4 +48,4 @@ Project descriptions are concise summaries of public repository information, not
 
 ## Maintainer
 
-Djunekz — <https://github.com/djunekz>
+Djunekz - <https://github.com/djunekz>
